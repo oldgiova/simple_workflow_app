@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Simple Workflow App</title>
+ 
+ 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="https://gist.github.com/hellt/bc4fc51d6f1b9584605517f5c8d6a5a0/raw/1541916ad019f8b5349d7353489b6fd2d36513dd/jumbotron-narrow.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Workflow App</h3>
+        </div>
+ 
+        <div class="jumbotron">
+            <h2>hostname scelto:</h2>
+            <p class="lead"></p>
+	    <h2>{{ hostname }}</h2>
+        </div>
+ 
+        <div class="jumbotron">
+            <h2>output comando:</h2>
+            <p class="lead"></p>
+	    <h2>{{ output }}</h2>
+        </div>
+ 
+        <div class="jumbotron">
+            <h2>eventuali errori:</h2>
+            <p class="lead"></p>
+	    <h2>{{ error }}</h2>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; Company 2015</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
