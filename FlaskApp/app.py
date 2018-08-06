@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, flash, redirect, session, abort
-import subprocess
+from flask import Flask, url_for, render_template, request, flash, redirect, session, abort
+import subprocess, os
 from commands import commands
 
 app = Flask(__name__)
@@ -23,7 +23,8 @@ def do_admin_login():
         session['logged_in'] = True
     else:
         flash('wrong password!')
-    return main()
+    return redirect(url_for('main'))
+#    return main()
 
 # step2 - first option
 @app.route('/step2', methods=['GET', 'POST'])
@@ -57,6 +58,7 @@ def step3():
                 )
 
 if __name__ == '__main__':
+    app.secret_key = os.urandom(12)
     app.run(
             debug=True,
             host='0.0.0.0',
