@@ -5,3 +5,4 @@ A simple workflow Python Webapp
 * commands.py: identify commands to set
 
 ## Suppports a simple auth
+username and password hardcoded
