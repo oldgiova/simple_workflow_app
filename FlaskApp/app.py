@@ -54,8 +54,6 @@ def step2():
         elif request.method == 'POST':
             hostname = request.form['hostname']
             hostname2 = request.form['hostname2']
-            print(hostname)
-            print(hostname2)
             return redirect(url_for('step3',hostname = hostname))
 
 @app.route('/step3', methods=['GET', 'POST'])
